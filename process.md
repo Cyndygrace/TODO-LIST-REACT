@@ -17,3 +17,5 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 next import uuid into app.js file.
 import uuid from 'uuid'
+
+next we import google font link into our index.html
