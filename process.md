@@ -7,4 +7,7 @@ npm install bootstrap uuid
 
  <!-- creating components -->
  we create a new component folder where all our component files will reside, 
- we then create our first component file which is the todo input.js
+ we then create the component files which we will need
+  Todoinput.js, Todolist.js and todoItem.js
+
+  Todoitem is imported inside the TodoList and both todolist and todoinput is imported into the app.js folder.
