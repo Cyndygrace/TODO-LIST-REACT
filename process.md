@@ -19,3 +19,6 @@ next import uuid into app.js file.
 import uuid from 'uuid'
 
 next we import google font link into our index.html
+
+<!-- track changes -->
+first in our App.js component, we set a default state to track changes for when items will be created, edited and deleted, displayed 
