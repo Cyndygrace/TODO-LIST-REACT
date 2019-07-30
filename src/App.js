@@ -14,6 +14,11 @@ const handleChange = e => {
   setState({
     item: e.target.value
   });
+};
+
+// form to capture each event on form submit
+const handleSubmit = (e) =>{
+  e.preventDefault();
 }
 
   return (
@@ -22,7 +27,11 @@ const handleChange = e => {
         <div className="col-10 mx-auto col-md-8 mt-4">
           <h3 className="text-capitalize text-center"> todo input </h3>
           {/* pass the attributes as prop to where the component is defined */}
-          <TodoInput item={state.item} handelChange={handleChange}/>
+          <TodoInput 
+          item={state.item} 
+          handleChange={handleChange} 
+          handleSubmit={handleSubmit}
+          />
           <TodoList />
         </div>
       </div>
