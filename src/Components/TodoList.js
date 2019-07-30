@@ -2,10 +2,12 @@ import React from 'react'
 import TodoItem from './TodoItem'
 const TodoList = () => {
   return (
-    <div>
-      <h1>hello from todo list</h1>
-      <TodoItem />
-    </div>
+    <ul className="list-group my-5"> <h3 className="text-capitalize text-center">todo list</h3>
+    <TodoItem />
+    <button type="submit" className="btn btn-danger btn-block text-capitalize mt-5">Clear List</button>
+
+    </ul>
+   
   )
 }
 
