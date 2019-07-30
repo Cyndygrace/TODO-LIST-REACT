@@ -21,4 +21,11 @@ import uuid from 'uuid'
 next we import google font link into our index.html
 
 <!-- track changes -->
-first in our App.js component, we set a default state to track changes for when items will be created, edited and deleted, displayed 
+first in our App.js component, we set a default state to track changes for when items will be created, edited, deleted and displayed 
+
+next we write a function to listen and handle these changes.
+
+next we pass the value handlechange method and default state of the item into the prop nested todoinput component
+
+then we go to the todoInput component file to destructure  the value of the item and handlechange method and the in the for set value = the item
+
