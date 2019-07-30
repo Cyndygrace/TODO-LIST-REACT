@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TodoItem = props => {
-  const { title } = props;
+  const { title , handleDelete} = props;
   return (
     <li className="list-group-item text-capitalize d-flex justify-content-between my-2">
       <h6>{title}</h6>
@@ -9,7 +9,7 @@ const TodoItem = props => {
         <span className="mx-2 text-success">
           <i className="fas fa-pen" />
         </span>
-        <span className="mx-2 text-danger">
+        <span className="mx-2 text-danger" onClick={handleDelete}>
           <i className="fas fa-trash" />
         </span>
       </div>

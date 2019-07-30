@@ -45,6 +45,13 @@ function App() {
 const clearList = () => {
   setItems([])
 }
+
+const handleDelete = (id) => {
+  // fitlteredItems returns a new array of only items that match the condition
+  const filteredItems = items.filter(item => item.id !== id)
+  // we set the items array to the new filteredItems array
+  setItems(filteredItems)
+}
   return (
     <div className="container">
       <div className="row">
@@ -56,7 +63,9 @@ const clearList = () => {
             handleChange={handleChange}
             handleSubmit={handleSubmit}
           />
-          <TodoList items={items} clearList={clearList}/>
+          <TodoList items={items} clearList={clearList}
+          handleDelete={handleDelete}
+          />
         </div>
       </div>
     </div>
