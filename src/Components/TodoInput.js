@@ -14,7 +14,7 @@ const TodoInput = (props) => {
     {/* by setting value={item}, we are initializing the value of value to the value of state. the handle CHange method is now used to set new value to the value of input value so that the new input value is displayed on the browser when something is typed */}
     <input type="text" className="form-control text-capitalize" placeholder="add a todo item" value={item} 
     /* onChange of the user input */
-    onChange={handleChange}
+    onChange={handleChange} required
     />
     </div>
     <button type="submit" className="btn btn-block btn-primary mt-3">add item</button>
