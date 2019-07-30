@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
+import TodoList from '../src/Components/TodoList'
+import TodoInput from '../src/Components/TodoInput'
 
 function App() {
   return (
     <div>
-      hello from app
-      
+      <h1>hello from app</h1>
+      <TodoInput />
+      <TodoList />
     </div>
   );
 }
