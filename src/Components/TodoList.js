@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TodoItem from './TodoItem';
 
-const TodoList = ({ items }) => {
+const TodoList = ({ items, clearList }) => {
   const [data, setData] = useState([]);
   useEffect(() => {
     setData(items);
@@ -15,6 +15,7 @@ const TodoList = ({ items }) => {
       <button
         type="submit"
         className="btn btn-danger btn-block text-capitalize mt-5"
+        onClick={clearList}
       >
         Clear List
       </button>

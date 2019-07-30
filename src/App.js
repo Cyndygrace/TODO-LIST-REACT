@@ -24,28 +24,27 @@ function App() {
   // form to capture each event on form submit
   const handleSubmit = e => {
     e.preventDefault();
-    const inputValue = e.target.elements.namedItem('item').value;
+    // const inputValue = e.target.elements.namedItem('item').value;
 
     // to create new item
     const newItem = {
       // item properties
       id,
-      title: inputValue //the new state of the item
+      title: item //the new state of the item
     };
 
     setItems([...items, newItem]);
 
     setId(uuid());
+    setItem('');
+    setEditItem(editItem);
 
     //with spread operator, we take each existing item in the initail items array and add the new item and return a new array. this way, we do not have a nested array.
     // after submission re-set state
-
-    // items: items, //set to the updated array
-    // item: '', //set back to empty field
-    // id: uuid(), // for automatic generation of unique id
-    // editItem: false // not edited
-    console.log(items);
   };
+const clearList = () => {
+  setItems([])
+}
   return (
     <div className="container">
       <div className="row">
@@ -57,7 +56,7 @@ function App() {
             handleChange={handleChange}
             handleSubmit={handleSubmit}
           />
-          <TodoList items={items} />
+          <TodoList items={items} clearList={clearList}/>
         </div>
       </div>
     </div>
