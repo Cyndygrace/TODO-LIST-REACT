@@ -19,6 +19,17 @@ const handleChange = e => {
 // form to capture each event on form submit
 const handleSubmit = (e) =>{
   e.preventDefault();
+
+// to create new item
+const newItem = {
+  // item properties
+  id: state.id,
+  item: state.item //the new state of the item
+};
+console.log(newItem)
+const updatedItems = [...state.items, newItem]; //with spread operator, we take each existing item in the initail items array and add the new item and return a new array. this way, we do not have a nested array.
+// after submission re-set state
+
 }
 
   return (
