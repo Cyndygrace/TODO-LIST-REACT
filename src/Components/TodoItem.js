@@ -1,20 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-const TodoItem = () => {
+const TodoItem = props => {
+  const { title } = props;
   return (
-   <li className="list-group-item text-capitalize d-flex justify-content-between my-2">
-     <h6>Title</h6>
-     <div className="todo-icon">
-       <span className="mx-2 text-success">
-         <i className="fas fa-pen"></i>
-       </span>
-       <span className="mx-2 text-danger">
-         <i className="fas fa-trash"></i>
-       </span>
-     </div>
-   </li>
-  )
-}
+    <li className="list-group-item text-capitalize d-flex justify-content-between my-2">
+      <h6>{title}</h6>
+      <div className="todo-icon">
+        <span className="mx-2 text-success">
+          <i className="fas fa-pen" />
+        </span>
+        <span className="mx-2 text-danger">
+          <i className="fas fa-trash" />
+        </span>
+      </div>
+    </li>
+  );
+};
 
-
-export default TodoItem
+export default TodoItem;
