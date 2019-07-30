@@ -11,3 +11,9 @@ npm install bootstrap uuid
   Todoinput.js, Todolist.js and todoItem.js
 
   Todoitem is imported inside the TodoList and both todolist and todoinput is imported into the app.js folder.
+
+next we import bootstrap into app.js file 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+next import uuid into app.js file.
+import uuid from 'uuid'
