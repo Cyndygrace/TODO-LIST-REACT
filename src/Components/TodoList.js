@@ -1,9 +1,10 @@
 import React from 'react'
-
+import TodoItem from './TodoItem'
 const TodoList = () => {
   return (
     <div>
-      hello from todo list
+      <h1>hello from todo list</h1>
+      <TodoItem />
     </div>
   )
 }
