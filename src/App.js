@@ -22,7 +22,7 @@ const handleChange = e => {
         <div className="col-10 mx-auto col-md-8 mt-4">
           <h3 className="text-capitalize text-center"> todo input </h3>
           {/* pass the attributes as prop to where the component is defined */}
-          <TodoInput />
+          <TodoInput item={state.item} handelChange={handleChange}/>
           <TodoList />
         </div>
       </div>
