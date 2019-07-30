@@ -37,7 +37,7 @@ function App() {
 
     setId(uuid());
     setItem('');
-    setEditItem(editItem);
+    setEditItem(false);
 
     //with spread operator, we take each existing item in the initail items array and add the new item and return a new array. this way, we do not have a nested array.
     // after submission re-set state
@@ -52,6 +52,17 @@ const handleDelete = (id) => {
   // we set the items array to the new filteredItems array
   setItems(filteredItems)
 }
+
+const handleEdit = (id) => {
+  const filteredItems = items.filter(item => (item.id !== id))
+  setItems(filteredItems)
+  const selectedItem = items.find(item => item.id ===id)
+  console.log(selectedItem)
+  setItem(selectedItem.title)
+  setEditItem(true)
+  setId(id)
+
+}
   return (
     <div className="container">
       <div className="row">
@@ -62,9 +73,11 @@ const handleDelete = (id) => {
             item={item}
             handleChange={handleChange}
             handleSubmit={handleSubmit}
+            editItem={editItem}
           />
           <TodoList items={items} clearList={clearList}
           handleDelete={handleDelete}
+          handleEdit={handleEdit}
           />
         </div>
       </div>

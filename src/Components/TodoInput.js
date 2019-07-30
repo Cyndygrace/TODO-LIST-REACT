@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TodoInput = props => {
-  const { item, handleChange, handleSubmit } = props;
+  const { item, handleChange, handleSubmit, editItem } = props;
   return (
     <div className="card card-body my-3">
       <form onSubmit={handleSubmit}>
@@ -23,8 +23,11 @@ const TodoInput = props => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-block btn-primary mt-3">
-          add item
+        <button type="submit" className= {
+          editItem ? 
+         "btn btn-block btn-success mt-3" : "btn btn-block btn-primary mt-3"
+        }>
+          {editItem ? 'Edit Item' : 'Add Item'}
         </button>
       </form>
     </div>
